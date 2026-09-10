@@ -27,14 +27,14 @@
 ## 📌 The Problem: Why Clean Panels Manually?
 
 <p align="center">
-  <img src="docs/images/dusty_panel.jpg" alt="Dusty Solar Panel" width="70%">
+  <img src="docs/images/dusty panel.jpg" alt="Dusty Solar Panel" width="70%">
 </p>
 
 If you have ever watched dust slowly choke the output of a solar panel, you know the frustration. In environments prone to dust and particulate accumulation, efficiency drops drastically in weeks.
 
 The traditional solution? Someone climbs onto the roof with a sponge, a bucket of water, and a brush. It is tedious, dangerous, and completely impractical for daily maintenance.
 
-**Clear Panel IoT** removes the human element from the roof. It is a low-cost, automated washing system controlled right from your smartphone or set to run on a routine schedule—keeping photovoltaic cells operating at peak efficiency without risking anyone's safety.
+**Clear Panel IoT** removes the human element from the roof. It is a low-cost, automated washing system controlled right from your smartphone or set to run on a routine schedule, keeping photovoltaic cells operating at peak efficiency without risking anyone's safety.
 
 ---
 
