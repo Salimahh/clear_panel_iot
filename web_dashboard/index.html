@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solar Cleaning System</title>
+    <!-- External Libraries & Fonts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS Stylesheet Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dark">
+    <!-- Full Width Top Navigation -->
+    <nav class="top-nav">
+        <div class="brand">
+            <h1 id="headerTitle">Clear Panel IoT</h1>
+            <span class="device-uid">UID: SN-8204-X</span>
+        </div>
+        <div class="nav-controls">
+            <button id="langToggle" class="pill-btn">EN</button>
+            <button id="themeToggle" class="pill-btn"><i class="fa-solid fa-moon"></i></button>
+        </div>
+    </nav>
+    
+    <!-- Dashboard Grid -->
+    <main class="dashboard-grid">
+        
+        <!-- Primary Control Card -->
+        <section class="card primary-card" id="statusCard">
+            <h2 class="card-label" id="statusLabel">System Status</h2>
+            <div class="status-indicator">
+                <i class="fa-solid fa-droplet" id="waterIcon"></i>
+                <span id="statusText">Standby / Dry</span>
+            </div>
+            <button id="mainToggle" class="power-btn">
+                <i class="fa-solid fa-power-off"></i>
+                <span id="powerText">Start Cleaning</span>
+            </button>
+        </section>
+
+        <!-- Routine Schedule Card -->
+        <section class="card secondary-card">
+            <h2 class="card-label" id="scheduleLabel">Routine Schedule</h2>
+            <div class="schedule-list">
+                <div class="schedule-item">
+                    <span class="day" id="wedLabel">Wednesdays</span>
+                    <span class="time">06:00 AM</span>
+                </div>
+                <div class="schedule-item">
+                    <span class="day" id="sunLabel">Sundays</span>
+                    <span class="time">06:00 AM</span>
+                </div>
+            </div>
+            <button class="ghost-btn" id="editBtn">Edit Schedule</button>
+        </section>
+
+        <!-- System Information & Reservoir Twin Card -->
+        <section class="card secondary-card">
+            <h2 class="card-label" id="networkLabel">Network & Telemetry</h2>
+            <ul class="info-list">
+                <li>
+                    <span class="info-title" id="connLabel">Connection</span>
+                    <span class="info-value text-green" id="networkStatus">Online (MQTT)</span>
+                </li>
+                <li>
+                    <span class="info-title" id="batteryLabel">System Power</span>
+                    <span class="info-value text-green" id="batteryStatus">15.6V (Optimal)</span>
+                </li>
+                <li>
+                    <span class="info-title" id="overrideLabel">Manual Override</span>
+                    <span class="info-value" id="overrideValue">Enabled</span>
+                </li>
+            </ul>
+
+            <!-- Bulletproof Reservoir Digital Twin -->
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(128,128,128,0.2);">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                    <span id="reservoirLabel" style="color: #888; font-weight: 600;">Reservoir Digital Twin</span>
+                    <span id="waterLevelPct" style="color: #4da6ff; font-weight: 700;">85%</span>
+                </div>
+                
+                <div style="width: 100%; background-color: #2a2a2a; border-radius: 8px; height: 14px; overflow: hidden; border: 1px solid #444;">
+                    <div id="waterFill" style="width: 85%; background-color: #4da6ff; height: 100%; border-radius: 6px; box-shadow: 0 0 10px rgba(77, 166, 255, 0.4); transition: width 0.5s ease;"></div>
+                </div>
+                
+                <span id="alertText" style="font-size: 0.8rem; color: #888; display: block; margin-top: 8px; text-align: right;">Sensor: Active</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- External MQTT Library -->
+    <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    
+    <!-- YOUR JAVASCRIPT LINK -->
+    <script src="app.js"></script>
+</body>
+</html>

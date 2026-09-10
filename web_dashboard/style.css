@@ -1,0 +1,148 @@
+:root {
+    --bg-color: #f3f4f6;
+    --nav-bg: #ffffff;
+    --card-bg: #ffffff;
+    --text-main: #000000;
+    --text-muted: #4b5563;
+    --accent-brown: #a67c52;
+    --accent-red: #dc2626;   
+    --status-off: #4b5563;
+    --status-active-blue: #0284c7;
+    --status-green: #16a34a;
+}
+
+[data-theme="dark"] {
+    --bg-color: #000000;
+    --nav-bg: #0a0a0a;
+    --card-bg: #141414;
+    --text-main: #ffffff; /* Pure white for maximum projector visibility */
+    --text-muted: #d4d4d8; /* Brighter gray so it does not wash out */
+    --accent-brown: #d99a5a;
+    --status-off: #ffffff;
+    --status-active-blue: #38bdf8;
+    --status-green: #4ade80;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 5%;
+    background-color: var(--nav-bg);
+    border-bottom: 2px solid rgba(128, 128, 128, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.brand h1 { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; }
+.device-uid { font-size: 14px; font-weight: 600; color: var(--text-muted); letter-spacing: 1px; }
+
+.nav-controls { display: flex; gap: 12px; }
+
+.pill-btn {
+    background-color: var(--card-bg);
+    border: none;
+    color: var(--text-main);
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Vertical Scroll Layout */
+.dashboard-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px; /* Generous breathing room between cards */
+    padding: 40px 5% 80px 5%;
+    max-width: 650px; /* Keeps it readable on wide screens */
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+
+.card-label { 
+    font-size: 15px; 
+    font-weight: 800;
+    color: var(--text-muted); 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    margin-bottom: 25px; 
+}
+
+.primary-card { display: flex; flex-direction: column; }
+
+.status-indicator {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 32px; /* Massive status font */
+    font-weight: 800;
+    color: var(--status-off);
+    margin-bottom: 45px;
+}
+
+.power-btn {
+    width: 100%;
+    padding: 24px;
+    background-color: var(--accent-brown);
+    color: #000; 
+    border: none;
+    border-radius: 16px;
+    font-size: 22px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.schedule-item { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 18px; font-weight: 600; }
+.schedule-item .time { color: var(--text-muted); }
+
+.ghost-btn {
+    width: 100%;
+    padding: 16px;
+    background: transparent;
+    color: var(--text-main);
+    border: 2px solid var(--text-muted);
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+.info-list { list-style: none; }
+.info-list li { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 17px; }
+.info-title { color: var(--text-muted); font-weight: 600; }
+.info-value { font-weight: 700; }
+.text-green { color: var(--status-green); }
+
+.system-is-on .status-indicator { color: var(--status-active-blue); }
+.system-is-on .power-btn { background-color: var(--accent-red); color: white; }
+
+@keyframes pulse-water {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.2); opacity: 0.8; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.system-is-on #waterIcon { animation: pulse-water 1.2s infinite; }
