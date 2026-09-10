@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/casing_with_hose.jpg" alt="Clear Panel IoT System Setup" width="100%">
+  <img src="docs/images/Prototype.png" alt="Clear Panel IoT System Setup" width="100%">
 </p>
 
 <h1 align="center">☀️ Clear Panel IoT: Automated Solar Panel Cleaning System</h1>
