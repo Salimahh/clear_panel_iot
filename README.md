@@ -85,8 +85,8 @@ Building a physical hardware project that combines water and electricity is neve
 
 <p align="center">
   <img src="docs/images/casing.jpg" alt="Empty Casing" width="30%" />
-  <img src="docs/images/casing_with_compartment.jpg" alt="Compartment Added" width="30%" />
-  <img src="docs/images/casing_with_new_pump.jpg" alt="Final Assembly with Pump" width="30%" />
+  <img src="docs/images/casing with compartment.jpg" alt="Compartment Added" width="30%" />
+  <img src="docs/images/casing with new pump.jpg" alt="Final Assembly with Pump" width="30%" />
 </p>
 
 1. **The Empty Enclosure:** Started with a blank IP-rated box. The biggest danger was water splashing near the electronics.
