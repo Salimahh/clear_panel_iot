@@ -96,7 +96,7 @@ Building a physical hardware project that combines water and electricity is neve
 ### 3D Enclosure Design
 Before cutting and drilling, the physical layout was prototyped in CAD:
 
-https://github.com/Salimahh/clear-panel-iot/assets/docs/images/3d_casing.mp4
+https://github.com/Salimahh/clear-panel-iot/assets/docs/images/3d Casing.mp4
 
 ---
 
@@ -105,7 +105,7 @@ https://github.com/Salimahh/clear-panel-iot/assets/docs/images/3d_casing.mp4
 The circuit was simulated and mapped out to ensure proper voltage isolation between the high-current pump circuit and the ESP32 logic pins.
 
 <p align="center">
-  <img src="docs/images/circuit_diagram.png" alt="Circuit Schematic" width="80%">
+  <img src="docs/images/cct diagram.png" alt="Circuit Schematic" width="80%">
 </p>
 
 ---
